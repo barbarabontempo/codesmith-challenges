@@ -3,13 +3,25 @@
 
 
 // CHALLENGE 7
-function rollCall(names) {
-
+function rollCall(namesArr) {
+  let count = 0;
+  function innerFunc(){
+    for(let i=0; i<namesArr.length; i++){
+      if(count<namesArr.length){
+        let result = namesArr[count]
+        count++
+        return console.log(result)
+      }else{
+        return console.log('Everyone accounted for')
+      }
+    }
+  }
+  return innerFunc;
 }
 
 // /*** Uncomment these to check your work! ***/
-// const rollCaller = rollCall(['Victoria', 'Juan', 'Ruth'])
-// rollCaller() // => should log 'Victoria'
-// rollCaller() // => should log 'Juan'
-// rollCaller() // => should log 'Ruth'
-// rollCaller() // => should log 'Everyone accounted for'
+const rollCaller = rollCall(['Victoria', 'Juan', 'Ruth'])
+rollCaller() // => should log 'Victoria'
+rollCaller() // => should log 'Juan'
+rollCaller() // => should log 'Ruth'
+rollCaller() // => should log 'Everyone accounted for'
