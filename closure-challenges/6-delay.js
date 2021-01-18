@@ -3,5 +3,13 @@
 
 // CHALLENGE 6
 function delay(func, wait) {
-
+    setTimeout(func, wait)
 }
+
+
+let printHello = function(){
+    return console.log("hello")
+}
+
+delay(printHello, 2000)
+
