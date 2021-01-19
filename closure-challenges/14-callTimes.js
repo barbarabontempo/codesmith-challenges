@@ -1,5 +1,5 @@
 // Challenge 14
-// There's no such thing as private properties on a JavaScript object! But, maybe there are? Implement a function createSecretHolder(secret) which accepts any value as secret and returns an object with ONLY two methods. getSecret() which returns the secret setSecret() which sets the secret
+// Write a function, callTimes, that returns a new function. The new function should return the number of times it’s been called.
 
 function callTimes() {
 
