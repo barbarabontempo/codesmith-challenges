@@ -3,11 +3,26 @@
 
 
 function censor() {
-
+    let obj = {};
+    function innerFunc(str1, str2){
+        if (str2){
+            obj[str1] = str2
+            return console.log("Obj:", obj)
+        } else {
+            Object.keys(obj).forEach((key) => {
+                str1 = str1.replace(key, obj[key])
+            })
+            return str1
+        }
+    }
+  
+    return innerFunc;
 }
 
+
+
 // /*** Uncomment these to check your work! ***/
-// const changeScene = censor();
-// changeScene('dogs', 'cats');
-// changeScene('quick', 'slow');
-// console.log(changeScene('The quick, brown fox jumps over the lazy dogs.')); // => should log 'The slow, brown fox jumps over the lazy cats.'
+const changeScene = censor();
+changeScene('dogs', 'cats');
+changeScene('quick', 'slow');
+console.log(changeScene('The quick, brown fox jumps over the lazy dogs.')); // => should log 'The slow, brown fox jumps over the lazy cats.'
