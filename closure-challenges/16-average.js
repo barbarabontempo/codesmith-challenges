@@ -3,15 +3,15 @@
 
 // CHALLENGE 16
 function average() {
-  let average = 0
+  let total = 0
   let counter = 0
   function innerFunc(num){
     if(num){
       counter++
-      average += num
-      return average/counter
+      total += num
+      return total/counter
     }else{
-      return counter === 0 ? 0 : average/counter
+      return counter === 0 ? 0 : total/counter
     }
   };
   return innerFunc
